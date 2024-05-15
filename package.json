@@ -1,0 +1,27 @@
+{
+  "name": "Posh-Collective",
+  "version": "1.0.0",
+  "description": "Website for Posh Collective Website",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build",
+    "render-build": "npm install && npm run build"
+  },
+  "keywords": [
+    "keyword1",
+    "keyword2"
+  ],
+  "author": "Julian Wiley",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.3",
+    "graphql": "^16.8.1",
+    "mongodb": "^6.6.1"
+  }
+}
