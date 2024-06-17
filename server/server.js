@@ -1,8 +1,8 @@
 // server.js
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
-const typeDefs = require('./graphql/schema'); // Define your GraphQL schema here
-const resolvers = require('./graphql/resolvers'); // Define your GraphQL resolvers here
+const typeDefs = require('./schemas/typeDefs'); // Update path to typeDefs
+const resolvers = require('./schemas/resolvers'); // Update path to resolvers
 const connectDB = require('./config/connection'); // Import MongoDB connection
 
 const PORT = process.env.PORT || 3001;
