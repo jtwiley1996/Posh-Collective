@@ -1,11 +1,9 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const expressJwt = require('express-jwt');
-const typeDefs = require('./schemas/typeDefs');
-const resolvers = require('./schemas/resolvers');
-const connectDB = require('./config/connection');
+const typeDefs = require('./schemas/typeDefs'); // Adjust path as needed
+const resolvers = require('./schemas/resolvers'); // Adjust path as needed
+const connectDB = require('./config/connection'); // Adjust path as needed
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,7 +17,7 @@ app.use(express.json());
 // JWT Secret (You should use a secure method to generate and store this)
 const JWT_SECRET = 'your_jwt_secret';
 
-// Example route for generating JWT
+// Example route for generating JWT (optional)
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
@@ -37,20 +35,39 @@ app.post('/login', async (req, res) => {
 
 // Set up Apollo Server for GraphQL
 async function startServer() {
-  const server = new ApolloServer({ typeDefs, resolvers });
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: ({ req }) => {
+      // Get the user token from the headers
+      const token = req.headers.authorization || '';
+
+      // Verify and decode the token
+      try {
+        const user = jwt.verify(token, JWT_SECRET);
+        // Optionally, you might fetch user data from your database here
+
+        return { user };
+      } catch (error) {
+        return { user: null };
+      }
+    },
+  });
 
   await server.start(); // Await server start before applying middleware
   server.applyMiddleware({
     app,
-    // Optionally, add context to Apollo Server to pass decoded JWT payload to resolvers
-    context: ({ req }) => {
-      const user = req.user || null; // req.user will be set by expressJwt if token is valid
-      return { user };
-    },
+    path: '/graphql',
+  });
+
+  // Add a catch-all route handler for any route that's not defined
+  app.use('*', (req, res) => {
+    res.status(404).json({ error: 'Not Found' });
   });
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
+    console.log(`GraphQL server ready at http://localhost:${PORT}${server.graphqlPath}`);
   });
 }
 
