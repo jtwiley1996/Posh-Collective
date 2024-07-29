@@ -1,11 +1,11 @@
 import React from 'react';
-import { useQuery, gql } from '@apollo/client';
+import '../styling/Home.css'; // Ensure this path matches your folder structure
 
 const Home = () => {
   return (
-    <div>
-      <h2>Welcome to Posh Collective</h2>
-      <p>This is the home page of your application.</p>
+    <div className="home-container">
+      <h2 className="home-title">Welcome to Posh Collective</h2>
+      <p className="home-description">One stop shop for classic fashion finds.</p>
       {/* Add more content here */}
     </div>
   );

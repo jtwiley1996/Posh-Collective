@@ -1,14 +1,15 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Cinzel', serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Header styles */
 header {
   background: #333;
   color: #fff;
-  padding: .5rem;
+  padding: 0.5rem;
   width: 100%;
   position: fixed; /* Fixes the header at the top */
   top: 0;
@@ -77,10 +78,9 @@ nav ul li a:hover {
 
 /* Main content styling */
 main {
-  padding-top: 8rem; /* Adjusted padding to ensure content is not hidden behind the larger header */
+  margin-top: 4rem; /* Ensure content starts below the fixed header */
+  padding: 1rem;
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
+  text-align: center; /* Center text within the main area */
 }
 
-/* Optional: Add a max-width to prevent overflow */
-body {
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-}
