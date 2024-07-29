@@ -1,10 +1,13 @@
-/* Example CSS styles */
+/* Ensure the Noto Serif Display font is used throughout */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Header styles */
 header {
   background: #333;
   color: #fff;
@@ -18,8 +21,29 @@ header {
   justify-content: space-between; /* Space between logo and navigation */
   align-items: center; /* Vertically center items */
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  height: auto; /* Adjusted to accommodate larger logo text */
 }
 
+/* Logo text styling */
+.header-left {
+  font-family: 'Noto Serif Display', serif; /* Ensure the font is applied here */
+  position: relative; /* Allow for positioning adjustments */
+}
+
+.logo-text {
+  letter-spacing: 0.2rem; /* Increase spacing between letters */
+  text-transform: uppercase; /* Make text uppercase */
+  color: #fff; /* Text color */
+  font-weight: 700; /* Increase font weight for more prominence */
+  font-size: 2rem; /* Adjust font size to control text height */
+  line-height: 1; /* Reduce line height to control text spacing */
+  transform: scaleY(2); /* Vertically stretch the text */
+  transform-origin: center; /* Center the scaling effect */
+  position: relative; /* Relative positioning to adjust the text's position */
+  top: 1rem; /* Adjust to align text within the header */
+}
+
+/* Navigation styles */
 nav {
   display: flex;
   margin-left: auto; /* Pushes nav to the right */
@@ -47,12 +71,14 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Logo image styling */
 .logo {
   height: 4rem;
 }
 
+/* Main content styling */
 main {
-  padding-top: rem; /* Ensures content is not hidden behind the fixed header */
+  padding-top: 6rem; /* Adjusted padding to ensure content is not hidden behind the larger header */
 }
 
 /* Optional: Add a max-width to prevent overflow */
