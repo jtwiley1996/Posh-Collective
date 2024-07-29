@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import reactLogo from './assets/react.svg';
 import viteLogo from './vite.svg';
 import './App.css';
+import Header from './Header';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // Add export statement here
