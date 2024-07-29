@@ -21,8 +21,16 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-// Export the connection and any models you might add here
+// Import the User model
+const User = require('./User');
+
+// Import the Item model
+const Item = require('./Item');
+
+// Export the connection and the models
 module.exports = {
   mongoose,
   db,
+  User,
+  Item,
 };
