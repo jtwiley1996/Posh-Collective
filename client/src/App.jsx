@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import reactLogo from './assets/react.svg';
-import viteLogo from './vite.svg';
+import viteLogo from '/public/vite.svg'; // Updated path
 import './App.css';
 import Header from './Header';
 
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App; // Add export statement here
+export default App; // Ensure this export statement is here
