@@ -9,6 +9,21 @@ header {
   background: #333;
   color: #fff;
   padding: 1rem;
+  width: 100%;
+  position: fixed; /* Fixes the header at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures the header stays above other content */
+  display: flex;
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Vertically center items */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+nav {
+  display: flex;
+  margin-left: auto; /* Pushes nav to the right */
+  flex-shrink: 0; /* Prevents nav from shrinking */
 }
 
 nav ul {
@@ -19,7 +34,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 1rem;
+  margin-left: 1rem; /* Space between navigation items */
 }
 
 nav ul li a {
@@ -33,4 +48,13 @@ nav ul li a:hover {
 
 .logo {
   height: 4rem;
+}
+
+main {
+  padding-top: 4rem; /* Ensures content is not hidden behind the fixed header */
+}
+
+/* Optional: Add a max-width to prevent overflow */
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
