@@ -18,11 +18,10 @@ body {
   justify-content: center;
 }
 
-/* Header styles */
 header {
-  background: #333;
+  background: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
   color: #fff;
-  padding: 0.5rem;
+  padding: .5rem;
   width: 100%;
   position: fixed; /* Fixes the header at the top */
   top: 0;
@@ -35,8 +34,8 @@ header {
   height: auto; /* Adjusted to accommodate larger logo text */
   overflow: visible; /* Allows text to overflow the header */
   font-family: 'Cinzel', serif;
-  animation: fadeIn 3s ease-out forwards; /* Apply the fade-in animation */
-}
+  opacity: 0; /* Start with opacity 0 for the fade-in effect */
+  animation: fadeIn 2s ease-out forwards; /* Apply the fade-in animation */
 
 /* Logo text styling */
 .header-left {
