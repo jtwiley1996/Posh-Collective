@@ -98,6 +98,17 @@ header {
   top: 0.33rem; /* Adjust to align text within the header, allow it to overflow */
 }
 
+/* Ensure the link behaves as a block-level element */
+.logo-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color from parent */
+}
+
+/* If needed, adjust styling for the logo text within the link */
+.logo-text {
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
 /* Navigation styles */
 nav {
   display: flex;

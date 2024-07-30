@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // If you're using React Router for navigation
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 const Header = () => {
   return (
     <header>
       <div className="header-left">
-        <span className="logo-text">P O S H</span>
+        <Link to="/" className="logo-link">
+          <span className="logo-text">P O S H</span>
+        </Link>
       </div>
       <nav>
         <ul>
@@ -25,3 +27,4 @@ const Header = () => {
 };
 
 export default Header;
+
