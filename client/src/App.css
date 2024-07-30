@@ -35,7 +35,7 @@ header {
   overflow: visible; /* Allows text to overflow the header */
   font-family: 'Cinzel', serif;
   opacity: 0; /* Start with opacity 0 for the fade-in effect */
-  animation: fadeIn 2s ease-out forwards; /* Apply the fade-in animation */
+  animation: fadeIn 4s ease-out forwards; /* Apply the fade-in animation */
 
 /* Logo text styling */
 .header-left {
