@@ -16,15 +16,15 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%;
   justify-content: center;
-  background-image: url('./images/pattern.png'); /* Path to your pattern image */
+  background-image: url('./images/pattern(2).png'); /* Path to your pattern image */
   background-repeat: repeat; /* Repeat the image */
   background-size: auto; /* Ensure the image is displayed at its original size */
 }
 
 header {
-  background: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 70% opacity */
   color: #fff;
-  padding: .5rem;
+  padding: .65rem;
   width: 100%;
   position: fixed; /* Fixes the header at the top */
   top: 0;
