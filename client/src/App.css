@@ -1,39 +1,3 @@
-/* Define the fade-in animation for background */
-@keyframes fadeInBackground {
-  0% {
-    background-color: #4e2c49; /* Initial background color */
-    background-image: none; /* Start with no background image */
-  }
-  25% {
-    background-color: #4e2c49; /* Maintain background color */
-    background-image: none; /* Still no background image */
-  }
-  50% {
-    background-color: #4e2c49; /* Maintain background color */
-    background-image: url('./images/pattern(2).png'); /* Start applying the pattern image */
-    background-repeat: repeat; /* Repeat the image */
-    background-size: auto; /* Ensure the image is displayed at its original size */
-    background-blend-mode: overlay; /* Use blending mode to adjust the visibility */
-    background-opacity: 0.25; /* Adjust pattern opacity */
-  }
-  75% {
-    background-color: #4e2c49; /* Maintain background color */
-    background-image: url('./images/pattern(2).png'); /* Continue applying the pattern image */
-    background-repeat: repeat; /* Repeat the image */
-    background-size: auto; /* Ensure the image is displayed at its original size */
-    background-blend-mode: overlay; /* Continue blending mode */
-    background-opacity: 0.5; /* Adjust pattern opacity */
-  }
-  100% {
-    background-color: #4e2c49; /* Maintain background color */
-    background-image: url('./images/pattern(2).png'); /* Apply the pattern image */
-    background-repeat: repeat; /* Repeat the image */
-    background-size: auto; /* Ensure the image is displayed at its original size */
-    background-blend-mode: overlay; /* Continue blending mode */
-    background-opacity: 1; /* Fully opaque pattern */
-  }
-}
-
 /* Define the fade-in animation for header */
 @keyframes fadeInHeader {
   0% {
@@ -51,16 +15,12 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%;
   justify-content: center;
-  background-color: #4e2c49; /* Set background color */
-  background-image: url('./images/pattern(2).png'); /* Path to your pattern image */
-  background-repeat: repeat; /* Repeat the image */
-  background-size: auto; /* Ensure the image is displayed at its original size */
-  animation: fadeInBackground 4s ease-out forwards; /* Apply the background fade-in animation */
+  background-color: #92a24a; /* New background color */
 }
 
 /* Header styles */
 header {
-  background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  background: rgba(0, 0, 0, 0.3); /* Black background with 50% opacity */
   color: #fff;
   padding: .65rem;
   width: 100%;
@@ -159,7 +119,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem;
-  background-color: #24172c;
+  background-color: #7a883e;
   color: #fff;
   font-family: 'Cinzel', serif;
 }
@@ -219,6 +179,7 @@ main {
 .footer-section .newsletter form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-section .newsletter input[type="email"] {
@@ -232,7 +193,7 @@ main {
   padding: 0.5rem;
   border: none;
   background-color: #fff;
-  color: #24172c;
+  color: #7a883e;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
@@ -280,4 +241,10 @@ main {
 
 .footer-section .legal ul li a:hover {
   text-decoration: underline;
+}
+
+.footer-section .social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
