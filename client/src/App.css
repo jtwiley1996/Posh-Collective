@@ -19,7 +19,6 @@ body {
   background-color: #92a24a; /* Fallback background color in case the image fails to load */
 }
 
-
 /* Header styles */
 header {
   background: rgba(0, 0, 0, 0.3); /* Black background with 50% opacity */
@@ -97,7 +96,6 @@ nav ul li a {
 nav ul li a:hover {
   color: aliceblue;
   text-decoration: underline;
-
 }
 
 /* Logo image styling */
@@ -112,8 +110,6 @@ main {
   box-sizing: border-box; /* Includes padding in the element's total width and height */
   text-align: center; /* Center text within the main area */
 }
-
-
 
 /* Footer Container */
 .footer-container {
@@ -168,7 +164,7 @@ main {
 }
 
 .footer-section .social-icons a {
-  color: #fff;
+  color: #fff; /* Ensure icon color is white */
   text-decoration: none;
   font-size: 1.5rem;
   margin: 0 0.5rem;
@@ -176,6 +172,23 @@ main {
 
 .footer-section .social-icons a:hover {
   text-decoration: underline;
+}
+
+/* Add styles for social media icons */
+.social-icon {
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  fill: currentColor; /* Ensure color from CSS is applied */
+  color: #fff;
+}
+
+/* Apply color to SVG directly if necessary */
+.social-icon svg {
+  color: #fff; /* Ensure the SVG uses the currentColor */
+}
+
+.social-icon:hover {
+  filter: brightness(0.8); /* Slightly darken on hover */
 }
 
 .footer-section .newsletter form {
