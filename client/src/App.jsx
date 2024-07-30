@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import routing components
 import Header from './Header';
+import Footer from './Footer';
 import Home from './pages/Home'; // Import your page components
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
