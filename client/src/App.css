@@ -130,11 +130,12 @@ nav ul li {
 
 nav ul li a {
   color: #fff;
-  text-decoration: none;
 }
 
 nav ul li a:hover {
+  color: aliceblue;
   text-decoration: underline;
+
 }
 
 /* Logo image styling */
