@@ -7,6 +7,8 @@
       opacity: 1;
     }
   }
+
+  
   
   .home-container {
     display: flex;
@@ -15,7 +17,7 @@
     height: 100vh; /* Full viewport height */
     text-align: center; /* Center text inside */
     margin: 0; /* Remove any default margin */
-    padding-top: 10rem; /* Add padding to create space between content and header */
+    padding-top: 8.5rem; /* Add padding to create space between content and header */
     opacity: 0; /* Start with opacity 0 for the fade-in effect */
     animation: fadeIn 4s ease-out forwards; /* Apply the fade-in animation */
   }
