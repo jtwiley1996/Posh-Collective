@@ -15,8 +15,10 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%;
   justify-content: center;
-  background-color: #92a24a; /* New background color */
+  background: url('./images/pattern(5).png') repeat; /* Set background image and make it repeat */
+  background-color: #92a24a; /* Fallback background color in case the image fails to load */
 }
+
 
 /* Header styles */
 header {
