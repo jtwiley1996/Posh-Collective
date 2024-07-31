@@ -21,7 +21,8 @@ body {
 
 /* Header styles */
 header {
-  background: rgba(0, 0, 0, 0.3); /* Black background with 50% opacity */
+  background: rgba(57, 106, 117, 0.7); /* Tiffany Blue with 30% opacity */
+
   color: #fff;
   padding: .65rem;
   width: 100%;
