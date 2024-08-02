@@ -1,33 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 import '../styling/Home.css'; // Ensure this path matches your folder structure
 
-const images = [
-  '/src/images/PoshMerch1.png',
-  '/src/images/PoshMerch2.png',
-  '/src/images/PoshMerch3.png',
-  '/src/images/PoshMerch4.png',
-];
+// Import images directly
+import PoshMerch1 from '../images/PoshMerch1.png';
+import PoshMerch2 from '../images/PoshMerch2.png';
+import PoshMerch3 from '../images/PoshMerch3.png';
+import PoshMerch4 from '../images/PoshMerch4.png';
 
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
-
   return (
     <div className="home-container">
       <section className="intro">
@@ -41,16 +23,50 @@ const Home = () => {
       </section>
 
       <section className="slideshow-container">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
-            alt={`Posh Merch ${index + 1}`}
-          />
-        ))}
-        <button className="prev" onClick={handlePrev}>❮</button>
-        <button className="next" onClick={handleNext}>❯</button>
+        <Slide
+          autoplay={true}
+          onChange={() => {}}
+          onStartChange={() => {}}
+        >
+          <div className="each-slide-effect">
+            <div
+              style={{
+                backgroundImage: `url(${PoshMerch1})`
+              }}
+            >
+              <span>Slide 1</span>
+            </div>
+          </div>
+          <div className="each-slide-effect">
+            <div
+              style={{
+                backgroundImage: `url(${PoshMerch2})`
+              }}
+            >
+              <span>Slide 2</span>
+            </div>
+          </div>
+          <div className="each-slide-effect">
+            <div
+              style={{
+                backgroundImage: `url(${PoshMerch3})`
+              }}
+            >
+              <span>Slide 3</span>
+            </div>
+          </div>
+          <div className="each-slide-effect">
+            <div
+              style={{
+                backgroundImage: `url(${PoshMerch4})`
+              }}
+            >
+              <span>Slide 4</span>
+            </div>
+          </div>
+        </Slide>
+        <button className="prev" onClick={() => document.querySelector('.prev').click()}>❮</button>
+        <button className="next" onClick={() => document.querySelector('.next').click()}>❯</button>
       </section>
 
       <section className="featured-products">
@@ -74,12 +90,20 @@ const Home = () => {
         <h2>Shop by Category</h2>
         <div className="category-grid">
           <div className="category-item">
-            <img src="/src/images/men-category.jpg" alt="Men's Category" />
-            <h3>Men</h3>
+            <img src="/src/images/men-category.jpg" alt="Women's Category" />
+            <h3>Shoes</h3>
           </div>
           <div className="category-item">
             <img src="/src/images/women-category.jpg" alt="Women's Category" />
-            <h3>Women</h3>
+            <h3>Bags</h3>
+          </div>
+          <div className="category-item">
+            <img src="/src/images/women-category.jpg" alt="Women's Category" />
+            <h3>Clothes</h3>
+          </div>
+          <div className="category-item">
+            <img src="/src/images/women-category.jpg" alt="Women's Category" />
+            <h3>Accessories</h3>
           </div>
           {/* Add more categories */}
         </div>
