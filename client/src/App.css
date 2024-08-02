@@ -37,6 +37,8 @@ header {
   height: auto; /* Adjusted to accommodate larger logo text */
   overflow: visible; /* Allows text to overflow the header */
   font-family: 'Cinzel', serif;
+  text-decoration: none;
+  outline: none;
   opacity: 0; /* Start with opacity 0 for the fade-in effect */
   animation: fadeInHeader 4s ease-out forwards; /* Apply the fade-in animation */
 }
