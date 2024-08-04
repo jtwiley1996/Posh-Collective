@@ -43,7 +43,7 @@ const Home = () => {
                 backgroundImage: `url(${PoshMerch2})`
               }}
             >
-              <span>Louis Vitton</span>
+              <span>Louis Vuitton</span>
             </div>
           </div>
           <div className="each-slide-effect">
@@ -52,7 +52,7 @@ const Home = () => {
                 backgroundImage: `url(${PoshMerch3})`
               }}
             >
-              <span>Louis Vitton</span>
+              <span>Louis Vuitton</span>
             </div>
           </div>
           <div className="each-slide-effect">
