@@ -94,6 +94,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
+.each-slide-effect div span {
+  opacity: 0.6;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import '../styling/Home.css'; // Ensure this path matches your folder structure
@@ -10,6 +10,16 @@ import PoshMerch3 from '../images/PoshMerch3.png';
 import PoshMerch4 from '../images/PoshMerch4.png';
 
 const Home = () => {
+  const slideRef = useRef(null);
+
+  const goBack = () => {
+    slideRef.current.goBack();
+  }
+
+  const goNext = () => {
+    slideRef.current.goNext();
+  }
+
   return (
     <div className="home-container">
       <section className="intro">
@@ -24,6 +34,7 @@ const Home = () => {
 
       <section className="slideshow-container">
         <Slide
+          ref={slideRef}
           autoplay={true}
           onChange={() => {}}
           onStartChange={() => {}}
@@ -65,8 +76,8 @@ const Home = () => {
             </div>
           </div>
         </Slide>
-        <button className="prev" onClick={() => document.querySelector('.prev').click()}>❮</button>
-        <button className="next" onClick={() => document.querySelector('.next').click()}>❯</button>
+        <button className="prev" onClick={goBack}>❮</button>
+        <button className="next" onClick={goNext}>❯</button>
       </section>
 
       <section className="featured-products">
