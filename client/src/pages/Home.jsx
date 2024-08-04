@@ -18,7 +18,7 @@ const Home = () => {
       </section>
 
       <section className="hero-banner">
-        <h1 className="hero-title">Discover Our New Collection</h1>
+        <h1 className="hero-title">Discover Our Fall Collection</h1>
         <button className="cta-button">Shop Now</button>
       </section>
 
@@ -34,7 +34,7 @@ const Home = () => {
                 backgroundImage: `url(${PoshMerch1})`
               }}
             >
-              <span>Slide 1</span>
+              <span>Chanel</span>
             </div>
           </div>
           <div className="each-slide-effect">
@@ -43,7 +43,7 @@ const Home = () => {
                 backgroundImage: `url(${PoshMerch2})`
               }}
             >
-              <span>Slide 2</span>
+              <span>Louis Vitton</span>
             </div>
           </div>
           <div className="each-slide-effect">
@@ -52,7 +52,7 @@ const Home = () => {
                 backgroundImage: `url(${PoshMerch3})`
               }}
             >
-              <span>Slide 3</span>
+              <span>Louis Vitton</span>
             </div>
           </div>
           <div className="each-slide-effect">
@@ -61,7 +61,7 @@ const Home = () => {
                 backgroundImage: `url(${PoshMerch4})`
               }}
             >
-              <span>Slide 4</span>
+              <span>Mulberry</span>
             </div>
           </div>
         </Slide>
