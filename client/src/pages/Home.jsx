@@ -10,15 +10,15 @@ import PoshMerch3 from '../images/PoshMerch3.png';
 import PoshMerch4 from '../images/PoshMerch4.png';
 
 const Home = () => {
-  const slideRef = useRef(null);
+  const slideRef = useRef();
 
   const goBack = () => {
     slideRef.current.goBack();
-  }
+  };
 
   const goNext = () => {
     slideRef.current.goNext();
-  }
+  };
 
   return (
     <div className="home-container">
@@ -33,45 +33,24 @@ const Home = () => {
       </section>
 
       <section className="slideshow-container">
-        <Slide
-          ref={slideRef}
-          autoplay={true}
-          onChange={() => {}}
-          onStartChange={() => {}}
-        >
+        <Slide autoplay={true} ref={slideRef}>
           <div className="each-slide-effect">
-            <div
-              style={{
-                backgroundImage: `url(${PoshMerch1})`
-              }}
-            >
+            <div style={{ backgroundImage: `url(${PoshMerch1})` }}>
               <span>Chanel</span>
             </div>
           </div>
           <div className="each-slide-effect">
-            <div
-              style={{
-                backgroundImage: `url(${PoshMerch2})`
-              }}
-            >
+            <div style={{ backgroundImage: `url(${PoshMerch2})` }}>
               <span>Louis Vuitton</span>
             </div>
           </div>
           <div className="each-slide-effect">
-            <div
-              style={{
-                backgroundImage: `url(${PoshMerch3})`
-              }}
-            >
+            <div style={{ backgroundImage: `url(${PoshMerch3})` }}>
               <span>Louis Vuitton</span>
             </div>
           </div>
           <div className="each-slide-effect">
-            <div
-              style={{
-                backgroundImage: `url(${PoshMerch4})`
-              }}
-            >
+            <div style={{ backgroundImage: `url(${PoshMerch4})` }}>
               <span>Mulberry</span>
             </div>
           </div>
@@ -80,7 +59,7 @@ const Home = () => {
         <button className="next" onClick={goNext}>❯</button>
       </section>
 
-      <section className="featured-products">
+      <section className="product-category-container">
         <h2>Featured Products</h2>
         <div className="product-grid">
           <div className="product-item">
@@ -95,13 +74,11 @@ const Home = () => {
           </div>
           {/* Add more product items */}
         </div>
-      </section>
 
-      <section className="categories">
         <h2>Shop by Category</h2>
         <div className="category-grid">
           <div className="category-item">
-            <img src="/src/images/men-category.jpg" alt="Women's Category" />
+            <img src="/src/images/men-category.jpg" alt="Men's Category" />
             <h3>Shoes</h3>
           </div>
           <div className="category-item">
