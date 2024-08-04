@@ -33,7 +33,7 @@ const Home = () => {
       </section>
 
       <section className="slideshow-container">
-        <Slide autoplay={true} ref={slideRef}>
+        <Slide autoplay={true} ref={slideRef} dots={false}>
           <div className="each-slide-effect">
             <div style={{ backgroundImage: `url(${PoshMerch1})` }}>
               <span>Chanel</span>
@@ -60,18 +60,7 @@ const Home = () => {
       </section>
 
       <section className="product-category-container">
-        <h2>Featured Products</h2>
         <div className="product-grid">
-          <div className="product-item">
-            <img src="/src/images/product1.jpg" alt="Product 1" />
-            <h3>Product Name</h3>
-            <p>$99.99</p>
-          </div>
-          <div className="product-item">
-            <img src="/src/images/product2.jpg" alt="Product 2" />
-            <h3>Product Name</h3>
-            <p>$99.99</p>
-          </div>
           {/* Add more product items */}
         </div>
 

@@ -15,7 +15,6 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%;
   justify-content: center;
-  background: url('./images/pattern(6).png') repeat; /* Set background image and make it repeat */
   background-color: #5a9d9b; /* Fallback background color in case the image fails to load */
 }
 
