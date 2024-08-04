@@ -85,8 +85,8 @@
 .each-slide-effect div {
   background-size: cover;
   background-position: center;
-  width: 40rem;
-  height: 40rem;
+  width: 40rem; /* Original width */
+  height: 40rem; /* Original height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,6 @@
 html body div#root main div.home-container section.slideshow-container div div.react-slideshow-container button.nav.default-nav {
   display: none !important; /* Hide navigation buttons */
 }
-
 
 .prev, .next {
   position: absolute;
@@ -127,11 +126,7 @@ html body div#root main div.home-container section.slideshow-container div div.r
 }
 
 .prev:hover, .next:hover {
-  background: rgba(0, 0, 0, 0.5); /* Optional: Slight background change on hover */
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* Slight background change on hover */
 }
 
 .product-category-container {
@@ -139,7 +134,7 @@ html body div#root main div.home-container section.slideshow-container div div.r
   background: rgba(57, 106, 117, 0.7);
   color: white;
   text-align: center;
-  width: 40rem; /* Same width as slides */
+  width: 37.8rem; /* Same width as slides */
   border-radius: 0.6rem; /* Match the slides' border radius */
   margin: 0 auto; /* Center the container horizontally */
 }
