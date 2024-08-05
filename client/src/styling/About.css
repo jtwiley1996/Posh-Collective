@@ -1,0 +1,33 @@
+/* About.css */
+.about-container {
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .location-section, .consignment-section {
+    margin-bottom: 2rem;
+  }
+  
+  .location-description, .consignment-notice, .consignment-details, .consignment-rules, .consignment-policy, .contact-info {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
