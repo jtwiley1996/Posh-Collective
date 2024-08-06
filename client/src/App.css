@@ -15,7 +15,7 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   width: 100%;
   justify-content: center;
-  background-color: #5a9d9b; /* Fallback background color in case the image fails to load */
+  background-color: #a4c5c4; /* Fallback background color in case the image fails to load */
 }
 
 .banner {
@@ -54,7 +54,7 @@ body {
 
 /* Header styles */
 header {
-  background: rgba(57, 106, 117, 0.7); /* Tiffany Blue with 30% opacity */
+  background: rgba(116, 161, 174, 0.7); /* Tiffany Blue with 30% opacity */
   color: #fff;
   padding: .65rem;
   width: 100%;
@@ -169,7 +169,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem;
-  background-color: #396a75;
+  background-color: #74a1ae;
   color: #fff;
   font-family: 'Cinzel', serif;
 }
