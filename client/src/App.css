@@ -67,13 +67,12 @@ header {
   align-items: center; /* Vertically center items */
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   height: auto; /* Adjusted to accommodate larger logo text */
-  overflow: visible; /* Allows text to overflow the header */
   font-family: 'Cinzel', serif;
   text-decoration: none;
   outline: none;
   opacity: 0; /* Start with opacity 0 for the fade-in effect */
   animation: fadeIn 4s ease-out forwards; /* Apply the fade-in animation */
-  transition: margin-top 0.3s ease; /* Smooth transition for margin-top */
+  transition: margin-top 0.2s ease; /* Smooth transition for margin-top */
 }
 
 /* Logo text styling */
