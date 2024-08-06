@@ -18,6 +18,40 @@ body {
   background-color: #5a9d9b; /* Fallback background color in case the image fails to load */
 }
 
+.banner {
+  background-color: #f8d7da; /* Light red background color */
+  color: #721c24; /* Dark red text color */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.banner p {
+  margin: 0;
+  display: inline;
+}
+
+.banner-close {
+  background: transparent;
+  border: none;
+  color: #721c24;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Header margin adjustment when banner is visible */
+.header-with-banner {
+  margin-top: 2.625rem; /* Adjust based on banner height */
+}
+
 /* Header styles */
 header {
   background: rgba(57, 106, 117, 0.7); /* Tiffany Blue with 30% opacity */
@@ -39,6 +73,7 @@ header {
   outline: none;
   opacity: 0; /* Start with opacity 0 for the fade-in effect */
   animation: fadeInHeader 4s ease-out forwards; /* Apply the fade-in animation */
+  transition: margin-top 0.3s ease; /* Smooth transition for margin-top */
 }
 
 /* Logo text styling */
@@ -46,6 +81,22 @@ header {
   font-family: 'Cinzel', serif; /* Ensure the font is applied here */
   position: relative; /* Allow for positioning adjustments */
 }
+
+/* Header with the banner hidden */
+.header-without-banner {
+  margin-top: 0; /* No additional margin when the banner is hidden */
+}
+
+/* Fade-in animation */
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 .logo-text {
   letter-spacing: 0.2rem; /* Increase spacing between letters */
@@ -264,3 +315,4 @@ main {
   flex-direction: column;
   align-items: flex-start;
 }
+

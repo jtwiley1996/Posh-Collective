@@ -1,6 +1,4 @@
-// client/src/App.jsx
-
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -13,6 +11,12 @@ import './App.css';
 import './index.css';
 
 function App() {
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
+
+  const handleCloseBanner = () => {
+    setIsBannerVisible(false);
+  };
+
   const client = new ApolloClient({
     uri: 'http://localhost:3001/graphql',
     cache: new InMemoryCache(),
@@ -21,7 +25,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
+        {isBannerVisible && (
+          <div className="banner">
+            <p>We will no longer be accepting summer consignment. Fall consignment begins August 15th</p>
+            <button className="banner-close" onClick={handleCloseBanner}>✖</button>
+          </div>
+        )}
+        <Header isBannerVisible={isBannerVisible} />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
