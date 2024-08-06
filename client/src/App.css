@@ -1,5 +1,5 @@
 /* Define the fade-in animation for header */
-@keyframes fadeInHeader {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -72,7 +72,7 @@ header {
   text-decoration: none;
   outline: none;
   opacity: 0; /* Start with opacity 0 for the fade-in effect */
-  animation: fadeInHeader 4s ease-out forwards; /* Apply the fade-in animation */
+  animation: fadeIn 4s ease-out forwards; /* Apply the fade-in animation */
   transition: margin-top 0.3s ease; /* Smooth transition for margin-top */
 }
 

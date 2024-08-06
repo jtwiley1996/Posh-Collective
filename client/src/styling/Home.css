@@ -65,45 +65,7 @@
   font-weight: 300;
 }
 
-.slideshow-container {
-  position: relative;
-  width: 40rem; /* Width of slides */
-  height: 40rem; /* Height of slides */
-  overflow: hidden;
-  margin-top: 5rem;
-  margin-bottom: 20px;
-  border: 1px solid #ddd; /* Optional border */
-  border-radius: 0.6rem;
-}
 
-.each-slide-effect {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.each-slide-effect div {
-  background-size: cover;
-  background-position: center;
-  width: 40rem; /* Original width */
-  height: 40rem; /* Original height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.each-slide-effect div span {
-  opacity: 0.6;
-}
-
-/* Hide the navigation buttons */
-html body div#root main div.home-container section.slideshow-container div div.react-slideshow-container button.nav.default-nav {
-  display: none !important; /* Hide navigation buttons */
-}
 
 .prev, .next {
   position: absolute;
@@ -165,6 +127,7 @@ html body div#root main div.home-container section.slideshow-container div div.r
   width: 45%;
   height: 500px;
   margin: 0 auto;
+  animation: fadeIn 4s ease-out forwards; /* Apply the fade-in animation */
 }
 
 .carousel-buttons {
