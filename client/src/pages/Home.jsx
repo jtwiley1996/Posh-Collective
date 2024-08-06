@@ -50,7 +50,7 @@ const Home = () => {
         <h2>Shop by Category</h2>
         <div className="category-grid">
           <div className="category-item">
-            <img src="/src/images/men-category.jpg" alt="Men's Category" />
+            <img src="/src/images/women-category.jpg" alt="Women's Category" />
             <h3>Shoes</h3>
           </div>
           <div className="category-item">
