@@ -133,7 +133,9 @@ html body div#root main div.home-container section.slideshow-container div div.r
   padding: 20px;
   background: rgba(57, 106, 117, 0.7);
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 37.8rem; /* Same width as slides */
   border-radius: 0.6rem; /* Match the slides' border radius */
   margin: 0 auto; /* Center the container horizontally */
