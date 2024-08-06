@@ -21,8 +21,12 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+
+  .owner-section {
+    margin-top: 10rem;
+  }
   
-  .location-section, .consignment-section {
+  .location-section, .consignment-section .owner-section {
     margin-bottom: 2rem;
   }
   
@@ -35,4 +39,3 @@
     margin-top: 2.5rem;
     border-radius: 1rem;
   }
-  
