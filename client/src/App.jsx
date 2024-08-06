@@ -1,16 +1,20 @@
+// client/src/App.jsx
+
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import routing components
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Home from './pages/Home'; // Import your page components
+import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import './App.css';
+import './index.css';
 
 function App() {
-  // Configure Apollo Client
   const client = new ApolloClient({
-    uri: 'http://localhost:3001/graphql', // Replace with your GraphQL server endpoint
+    uri: 'http://localhost:3001/graphql',
     cache: new InMemoryCache(),
   });
 
@@ -30,5 +34,11 @@ function App() {
     </ApolloProvider>
   );
 }
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 export default App;

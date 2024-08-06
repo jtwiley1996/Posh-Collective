@@ -1,24 +1,25 @@
-import React, { useRef } from 'react';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
-import '../styling/Home.css'; // Ensure this path matches your folder structure
+// client/src/pages/Home.jsx
 
-// Import images directly
+import React, { useState } from 'react';
+import Carousel from 'react-spring-3d-carousel';
+import { v4 as uuidv4 } from 'uuid';
+import { config } from 'react-spring';
+import '../styling/Home.css';
+
 import PoshMerch1 from '../images/PoshMerch1.png';
 import PoshMerch2 from '../images/PoshMerch2.png';
 import PoshMerch3 from '../images/PoshMerch3.png';
 import PoshMerch4 from '../images/PoshMerch4.png';
 
 const Home = () => {
-  const slideRef = useRef();
+  const [goToSlide, setGoToSlide] = useState(0);
 
-  const goBack = () => {
-    slideRef.current.goBack();
-  };
-
-  const goNext = () => {
-    slideRef.current.goNext();
-  };
+  const slides = [
+    { key: uuidv4(), content: <img src={PoshMerch1} alt="Chanel" /> },
+    { key: uuidv4(), content: <img src={PoshMerch2} alt="Louis Vuitton" /> },
+    { key: uuidv4(), content: <img src={PoshMerch3} alt="Louis Vuitton" /> },
+    { key: uuidv4(), content: <img src={PoshMerch4} alt="Mulberry" /> },
+  ];
 
   return (
     <div className="home-container">
@@ -27,43 +28,25 @@ const Home = () => {
         <p className="home-description">One stop shop for classic fashion finds.</p>
       </section>
 
+      <section className="carousel-container">
+        <Carousel
+          slides={slides}
+          goToSlide={goToSlide}
+          offsetRadius={2}
+          animationConfig={config.gentle}
+        />
+        <div className="carousel-buttons">
+          <button onClick={() => setGoToSlide(goToSlide - 1)}>❮</button>
+          <button onClick={() => setGoToSlide(goToSlide + 1)}>❯</button>
+        </div>
+      </section>
+
       <section className="hero-banner">
         <h1 className="hero-title">Discover Our Fall Collection</h1>
         <button className="cta-button">Shop Now</button>
       </section>
 
-      <section className="slideshow-container">
-        <Slide autoplay={true} ref={slideRef} dots={false}>
-          <div className="each-slide-effect">
-            <div style={{ backgroundImage: `url(${PoshMerch1})` }}>
-              <span>Chanel</span>
-            </div>
-          </div>
-          <div className="each-slide-effect">
-            <div style={{ backgroundImage: `url(${PoshMerch2})` }}>
-              <span>Louis Vuitton</span>
-            </div>
-          </div>
-          <div className="each-slide-effect">
-            <div style={{ backgroundImage: `url(${PoshMerch3})` }}>
-              <span>Louis Vuitton</span>
-            </div>
-          </div>
-          <div className="each-slide-effect">
-            <div style={{ backgroundImage: `url(${PoshMerch4})` }}>
-              <span>Mulberry</span>
-            </div>
-          </div>
-        </Slide>
-        <button className="prev" onClick={goBack}>❮</button>
-        <button className="next" onClick={goNext}>❯</button>
-      </section>
-
       <section className="product-category-container">
-        <div className="product-grid">
-          {/* Add more product items */}
-        </div>
-
         <h2>Shop by Category</h2>
         <div className="category-grid">
           <div className="category-item">
@@ -82,7 +65,6 @@ const Home = () => {
             <img src="/src/images/women-category.jpg" alt="Women's Category" />
             <h3>Accessories</h3>
           </div>
-          {/* Add more categories */}
         </div>
       </section>
     </div>

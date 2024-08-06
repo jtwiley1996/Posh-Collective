@@ -27,7 +27,8 @@
   justify-content: center;
   color: white;
   text-align: center;
-  border-radius: 1rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .hero-title {
@@ -158,4 +159,29 @@ html body div#root main div.home-container section.slideshow-container div div.r
 .category-item img {
   width: 100%;
   height: auto;
+}
+
+.carousel-container {
+  width: 45%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.carousel-buttons {
+  margin-top: 20px;
+}
+
+
+.carousel-buttons button {
+  background: transparent; /* No background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 1rem; /* Adjust font size as needed */
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none; /* Remove outline */
+}
+
+.carousel-buttons button:hover {
+  opacity: 0.8; /* Slightly change opacity on hover for better visibility */
 }
