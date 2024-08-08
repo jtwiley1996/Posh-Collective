@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7499bc58-19c4-4797-b00d-85c5ded12c66/deploy-status)](https://app.netlify.com/sites/posh-collective/deploys)
