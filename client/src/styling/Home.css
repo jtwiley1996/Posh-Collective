@@ -148,3 +148,52 @@
 .carousel-buttons button:hover {
   opacity: 0.8; /* Slightly change opacity on hover for better visibility */
 }
+
+
+
+
+/* Existing styles here */
+
+/* Media query for phones */
+@media (max-width: 600px) {
+  .hero-banner {
+    width: 100%; /* Full width for the hero banner */
+    height: 40vh; /* Adjust height for mobile */
+    margin-top: 5rem; /* Reduce margin-top */
+    margin-bottom: 3rem; /* Reduce margin-bottom */
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Smaller font size for the hero title */
+  }
+
+  .cta-button {
+    padding: 8px 15px; /* Adjust button padding */
+    font-size: 0.9rem; /* Smaller font size for the button */
+  }
+
+  .home-title {
+    font-size: 2rem; /* Smaller font size for the home title */
+  }
+
+  .home-description {
+    font-size: 1rem; /* Smaller font size for the description */
+  }
+
+  .carousel-container {
+    width: 90%; /* Full width for the carousel */
+    height: 300px; /* Adjust height for mobile */
+  }
+
+  .prev, .next {
+    font-size: 1.5rem; /* Smaller font size for carousel arrows */
+  }
+
+  .product-category-container {
+    width: 90%; /* Full width for the product category container */
+  }
+
+  .category-item {
+    width: 150px; /* Smaller width for category items */
+  }
+}

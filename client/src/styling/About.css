@@ -39,3 +39,42 @@
     margin-top: 2.5rem;
     border-radius: 1rem;
   }
+
+
+
+
+  /* Existing styles here */
+
+/* Media query for phones */
+@media (max-width: 600px) {
+    .about-container {
+      width: 90%; /* Full width for the about container */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    .about-title {
+      font-size: 2rem; /* Smaller font size for the title */
+    }
+  
+    .about-description {
+      font-size: 1rem; /* Smaller font size for the description */
+    }
+  
+    .section-title {
+      font-size: 1.5rem; /* Smaller font size for section titles */
+    }
+  
+    .owner-section, .location-section, .consignment-section {
+      margin-top: 5rem; /* Reduce margin for sections */
+    }
+  
+    .location-description, .consignment-notice, .consignment-details, .consignment-rules, .consignment-policy, .contact-info {
+      font-size: 0.9rem; /* Smaller font size for text in sections */
+    }
+  
+    .location-picture, .owner-picture {
+      width: 100%; /* Full width for pictures */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+  

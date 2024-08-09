@@ -315,3 +315,46 @@ main {
   align-items: flex-start;
 }
 
+
+
+
+
+/* Existing styles here */
+
+/* Media query for phones */
+@media (max-width: 600px) {
+  .banner {
+    font-size: 0.9rem; /* Adjust banner text size */
+    padding: 8px; /* Adjust padding */
+  }
+
+  .header-with-banner {
+    margin-top: 2rem; /* Adjust based on banner height */
+  }
+
+  .logo-text {
+    font-size: 2rem; /* Smaller font size for logo text */
+    letter-spacing: 0.1rem; /* Reduced letter spacing */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation items vertically */
+  }
+
+  nav ul li {
+    margin: 0.5rem 0; /* Reduced spacing between items */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack footer sections vertically */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .footer-section {
+    margin: 1rem 0; /* Adjust margin for vertical stacking */
+  }
+
+  .footer-section .payment-methods img {
+    width: 40px; /* Smaller payment method icons */
+  }
+}
