@@ -68,8 +68,6 @@ header {
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   height: auto; /* Adjusted to accommodate larger logo text */
   font-family: 'Cinzel', serif;
-  text-decoration: none;
-  outline: none;
   opacity: 0; /* Start with opacity 0 for the fade-in effect */
   animation: fadeIn 4s ease-out forwards; /* Apply the fade-in animation */
   transition: margin-top 0.2s ease; /* Smooth transition for margin-top */
@@ -138,10 +136,12 @@ nav ul {
 
 nav ul li {
   margin-left: 1rem; /* Space between navigation items */
+  outline: none;
 }
 
 nav ul li a {
   color: #fff;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
